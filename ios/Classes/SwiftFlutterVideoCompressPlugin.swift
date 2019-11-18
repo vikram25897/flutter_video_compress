@@ -146,14 +146,7 @@ public class SwiftFlutterVideoCompressPlugin: NSObject, FlutterPlugin {
     }
     
     private func getExportPreset(_ quality: NSNumber)->String {
-        switch(quality) {
-        case 2:
-            return AVAssetExportPresetMediumQuality
-        case 3:
-            return AVAssetExportPresetHighestQuality
-        default:
-            return AVAssetExportPresetLowQuality
-        }
+        return AVAssetExportPreset1920x1080
     }
     
     private func getComposition(_ isIncludeAudio: Bool,_ timeRange: CMTimeRange, _ sourceVideoTrack: AVAssetTrack)->AVAsset {
